@@ -1,0 +1,96 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+rag_env/
+venv/
+ENV/
+env/
+.venv
+
+# Environment variables
+.env
+.env.local
+
+# Database
+db/
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+api/app.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Temporary files
+temp_*
+tmp/
+*.tmp
+
+# Data (optional - uncomment if you don't want to commit data)
+# data/raw/
+# data/processed/
+
+# Frontend - Chỉ giữ các trang chức năng chính
+# Loại bỏ các trang template không sử dụng
+frontend/blog-*.html
+frontend/candidates-*.html
+frontend/employers-*.html
+frontend/index-2.html
+frontend/index-3.html
+frontend/job-grid-2.html
+frontend/job-grid.html
+frontend/job-list.html
+frontend/job-news.html
+frontend/job-single-2.html
+frontend/job-single-3.html
+frontend/job-single.html
+frontend/jobs_new_temp.html
+frontend/page-*.html
+frontend/pages-*.html
+frontend/test.html
+
+# Temporary PDFs
+temp_pdfs/
+
+# Analytics test files
+analytics_test.json
+
+# Utils notebooks
+utils/*.ipynb
+

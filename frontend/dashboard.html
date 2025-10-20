@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html class="no-js" lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <title>Dashboard - TalentBridge</title>
+    <meta content="ie=edge" http-equiv="x-ua-compatible"/>
+    <meta content="Dashboard quản lý CV và việc làm" name="description"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="assets/imgs/theme/favicon.svg" rel="shortcut icon" type="image/x-icon"/>
+    <link href="assets/css/plugins/animate.min.css" rel="stylesheet"/>
+    <link href="assets/css/main.css?v=1.0" rel="stylesheet"/>
+    <link href="assets/css/custom.css" rel="stylesheet"/>
+    <style>
+        .stats-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 24px;
+            transition: all 0.3s;
+        }
+        .stats-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        .stats-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #9777fa;
+        }
+        .stats-label {
+            color: #6b7280;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        .data-table {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 24px;
+        }
+        .table-responsive {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th {
+            background: #f3f4f6;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #374151;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        tr:hover {
+            background: #f9fafb;
+        }
+        .badge-status {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .badge-pending { background: #fef3c7; color: #92400e; }
+        .badge-approved { background: #d1fae5; color: #065f46; }
+        .badge-rejected { background: #fee2e2; color: #991b1b; }
+        .truncate {
+            max-width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        /* Salary Table Highlights */
+        .salary-rank-1 {
+            background: linear-gradient(135deg, #9777fa 0%, #6d4bd3 100%);
+            color: white;
+            font-weight: bold;
+        }
+        .salary-rank-2, .salary-rank-3 {
+            background: rgba(151, 119, 250, 0.15);
+            font-weight: 600;
+        }
+        .rank-badge {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 14px;
+            background: #9777fa;
+            color: white;
+        }
+        .count-badge {
+            background: #9777fa;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .progress-bar-custom {
+            height: 8px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #9777fa 0%, #6d4bd3 100%);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        .table-hover tbody tr:hover {
+            background: rgba(151, 119, 250, 0.05) !important;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<!-- Preloader -->
+<div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="text-center">
+                <img alt="TalentBridge" src="assets/imgs/theme/loading.gif"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Header -->
+<header class="header sticky-bar">
+    <div class="container">
+        <div class="main-header">
+            <div class="header-left">
+                <div class="header-logo">
+                    <a class="d-flex" href="index.html">
+                        <img alt="TalentBridge" src="assets/imgs/theme/jobhub-logo.svg"/>
+                    </a>
+                </div>
+                <div class="header-nav">
+                    <nav class="nav-main-menu d-none d-xl-block">
+                        <ul class="main-menu">
+                            <li><a href="index.html">Trang Chủ</a></li>
+                            <li><a href="job-grid-2.html">Việc Làm</a></li>
+                            <li><a href="cv-analysis.html">Phân Tích CV</a></li>
+                            <li><a class="active" href="dashboard.html">Dashboard</a></li>
+                            <li class="has-children">
+                                <a href="#">Thông Tin</a>
+                                <ul class="sub-menu">
+                                    <li><a href="page-about.html">Về Chúng Tôi</a></li>
+                                    <li><a href="page-contact.html">Liên Hệ</a></li>
+                                    <li><a href="pages-faqs.html">FAQ</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="block-signin">
+                    <a class="btn btn-default icon-edit hover-up" href="cv-analysis.html">Upload CV</a>
+                </div>
+            </div>
+            <div class="burger-icon burger-icon-white">
+                <span class="burger-icon-top"></span>
+                <span class="burger-icon-mid"></span>
+                <span class="burger-icon-bottom"></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-header-active mobile-header-wrapper-style perfect-scrollbar">
+    <div class="mobile-header-wrapper-inner">
+        <div class="mobile-header-content-area">
+            <div class="perfect-scroll">
+                <div class="mobile-menu-wrap mobile-header-border">
+                    <nav>
+                        <ul class="mobile-menu font-heading">
+                            <li><a href="index.html">Trang Chủ</a></li>
+                            <li><a href="job-grid-2.html">Việc Làm</a></li>
+                            <li><a href="cv-analysis.html">Phân Tích CV</a></li>
+                            <li><a class="active" href="dashboard.html">Dashboard</a></li>
+                            <li><a href="page-about.html">Về Chúng Tôi</a></li>
+                            <li><a href="page-contact.html">Liên Hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Content -->
+<main class="main">
+    <section class="section-box-2">
+        <div class="container">
+            <div class="banner-hero banner-single banner-single-bg">
+                <div class="block-banner text-center">
+                    <h3 class="wow animate__animated animate__fadeInUp">
+                        <span class="color-brand-2">Dashboard</span>
+                    </h3>
+                    <div class="font-sm color-text-paragraph-2 mt-10 wow animate__animated animate__fadeInUp">
+                        Quản lý CV, việc làm và ứng tuyển của bạn
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-box mt-50">
+        <div class="container">
+            <!-- Statistics Cards -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-card">
+                        <div class="stats-number" id="totalCVs">0</div>
+                        <div class="stats-label">Tổng Số CV</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-card">
+                        <div class="stats-number" id="totalJobs">0</div>
+                        <div class="stats-label">Việc Làm Có Sẵn</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-card">
+                        <div class="stats-number" id="totalApplications">0</div>
+                        <div class="stats-label">Đơn Ứng Tuyển</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-card">
+                        <div class="stats-number" id="totalMatches">0</div>
+                        <div class="stats-label">Lượt Phân Tích</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics Section -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h4 class="mb-4">📊 Phân Tích Xu Hướng Việc Làm</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Top Job Titles Chart -->
+                <div class="col-md-6 mb-4">
+                    <div class="stats-card">
+                        <h6 class="mb-3">🏆 Top 10 Vị Trí Tuyển Dụng Nhiều Nhất</h6>
+                        <canvas id="topJobTitlesChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Top Companies Chart -->
+                <div class="col-md-6 mb-4">
+                    <div class="stats-card">
+                        <h6 class="mb-3">🏢 Top 10 Công Ty Tuyển Dụng Nhiều Nhất</h6>
+                        <canvas id="topCompaniesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Location Distribution Chart -->
+                <div class="col-md-6 mb-4">
+                    <div class="stats-card">
+                        <h6 class="mb-3">📍 Phân Bố Địa Điểm Làm Việc</h6>
+                        <canvas id="locationChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Job Type Distribution Chart -->
+                <div class="col-md-6 mb-4">
+                    <div class="stats-card">
+                        <h6 class="mb-3">💼 Phân Bố Loại Hình Công Việc</h6>
+                        <canvas id="jobTypeChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Experience Distribution Chart -->
+                <div class="col-md-6 mb-4">
+                    <div class="stats-card">
+                        <h6 class="mb-3">📈 Yêu Cầu Kinh Nghiệm</h6>
+                        <canvas id="experienceChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Salary Distribution Chart -->
+                <div class="col-md-6 mb-4">
+                    <div class="stats-card">
+                        <h6 class="mb-3">💰 Phân Bố Mức Lương (Top 10)</h6>
+                        <canvas id="salaryChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Deadline Stats -->
+                <div class="col-md-12 mb-4">
+                    <div class="stats-card">
+                        <h6 class="mb-3">⏰ Thống Kê Deadline</h6>
+                        <div class="row text-center">
+                            <div class="col-md-4">
+                                <div class="stats-number text-danger" id="expiring7Days">0</div>
+                                <div class="stats-label">Sắp hết hạn trong 7 ngày</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="stats-number text-warning" id="expiring30Days">0</div>
+                                <div class="stats-label">Sắp hết hạn trong 30 ngày</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="stats-number text-info" id="totalWithDeadline">0</div>
+                                <div class="stats-label">Tổng số jobs có deadline</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Salary Insights Table (Unique - has percentage) -->
+            <div class="row mt-4">
+                <div class="col-md-12 mb-4">
+                    <div class="stats-card">
+                        <h6 class="mb-3">💰 Phân Tích Mức Lương Chi Tiết (Top 10)</h6>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 60px;">#</th>
+                                        <th>Mức Lương</th>
+                                        <th class="text-end" style="width: 150px;">Số Lượng Jobs</th>
+                                        <th class="text-end" style="width: 120px;">% Tổng</th>
+                                        <th style="width: 200px;">Phân Bố</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="topSalaryTable">
+                                    <tr><td colspan="5" class="text-center text-muted">Đang tải...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CVs Table -->
+            <div class="data-table mt-4">
+                <h5 class="mb-4">📄 Danh Sách CV</h5>
+                <div class="table-responsive">
+                    <table id="cvsTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tên</th>
+                                <th>Email</th>
+                                <th>Điện Thoại</th>
+                                <th>Kỹ Năng</th>
+                                <th>Ngày Upload</th>
+                                <th>Hành Động</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cvsTableBody">
+                            <tr>
+                                <td colspan="7" class="text-center">Đang tải...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Jobs Table -->
+            <div class="data-table mt-4">
+                <h5 class="mb-4">💼 Danh Sách Việc Làm</h5>
+                <div class="table-responsive">
+                    <table id="jobsTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tiêu Đề</th>
+                                <th>Công Ty</th>
+                                <th>Địa Điểm</th>
+                                <th>Lương</th>
+                                <th>Kinh Nghiệm</th>
+                                <th>Deadline</th>
+                            </tr>
+                        </thead>
+                        <tbody id="jobsTableBody">
+                            <tr>
+                                <td colspan="7" class="text-center">Đang tải...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Applications Table -->
+            <div class="data-table mt-4">
+                <h5 class="mb-4">📝 Lịch Sử Ứng Tuyển</h5>
+                <div class="table-responsive">
+                    <table id="applicationsTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Ứng Viên</th>
+                                <th>Công Việc</th>
+                                <th>Công Ty</th>
+                                <th>Trạng Thái</th>
+                                <th>Ngày Ứng Tuyển</th>
+                            </tr>
+                        </thead>
+                        <tbody id="applicationsTableBody">
+                            <tr>
+                                <td colspan="6" class="text-center">Đang tải...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer mt-50">
+    <div class="container">
+        <div class="footer-bottom mt-50">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="font-xs color-text-paragraph">
+                        Copyright © 2025. TalentBridge - Nền tảng tìm việc thông minh
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+<script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+<script src="assets/js/vendor/jquery-migrate-3.3.0.min.js"></script>
+<script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
+

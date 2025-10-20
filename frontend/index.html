@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html class="no-js" lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <title>TalentBridge - Nền Tảng Tìm Việc Cho Sinh Viên</title>
+    <meta content="ie=edge" http-equiv="x-ua-compatible"/>
+    <meta content="Tìm kiếm việc làm phù hợp với AI - Phân tích CV và gợi ý công việc dành cho sinh viên" name="description"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="TalentBridge - Nền Tảng Tìm Việc Cho Sinh Viên" property="og:title"/>
+    <meta content="website" property="og:type"/>
+    <meta content="http://localhost:9990" property="og:url"/>
+    <meta content="assets/imgs/theme/jobhub-logo.svg" property="og:image"/>
+    <!-- Favicon -->
+    <link href="assets/imgs/theme/favicon.svg" rel="shortcut icon" type="image/x-icon"/>
+    <!-- Template CSS -->
+    <link href="assets/css/plugins/animate.min.css" rel="stylesheet"/>
+    <link href="assets/css/main.css?v=1.0" rel="stylesheet"/>
+</head>
+<body>
+<!-- Preloader Start -->
+<div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="text-center">
+                <img alt="TalentBridge" src="assets/imgs/theme/loading.gif"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Header Placeholder -->
+<div id="header-placeholder"></div>
+
+<!-- Content -->
+<main class="main">
+    <section class="section-box">
+        <div class="banner-hero hero-1">
+            <div class="banner-inner">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="block-banner">
+                            <span class="text-small-primary text-small-primary--disk text-uppercase wow animate__animated animate__fadeInUp">Cơ hội việc làm cho sinh viên</span>
+                            <h1 class="heading-banner wow animate__animated animate__fadeInUp">Tìm Việc Làm Phù Hợp Với Bạn</h1>
+                            <div class="banner-description mt-30 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
+                                Nền tảng tìm việc thông minh dành cho sinh viên. Phân tích CV với AI và nhận gợi ý công việc phù hợp nhất với kỹ năng của bạn.
+                            </div>
+                            <div class="form-find mt-60 wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+                                <form action="jobs_new.html">
+                                    <input class="form-input input-keysearch mr-10" name="q" placeholder="Tên công việc, công ty..." type="text"/>
+                                    <select class="form-input mr-10 select-active" name="location">
+                                        <option value="">Địa điểm</option>
+                                        <option value="Hà Nội">Hà Nội</option>
+                                        <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                                        <option value="Đà Nẵng">Đà Nẵng</option>
+                                        <option value="Hải Phòng">Hải Phòng</option>
+                                        <option value="Cần Thơ">Cần Thơ</option>
+                                        <option value="Đồng Nai">Đồng Nai</option>
+                                        <option value="Bình Dương">Bình Dương</option>
+                                        <option value="Khác">Khác</option>
+                                    </select>
+                                    <button class="btn btn-default btn-find" type="submit">Tìm kiếm</button>
+                                </form>
+                            </div>
+                            <div class="list-tags-banner mt-60 wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
+                                <strong>Tìm kiếm phổ biến:</strong>
+                                <a href="jobs_new.html?q=thực tập">Thực tập</a>,
+                                <a href="jobs_new.html?q=part-time">Part-time</a>,
+                                <a href="jobs_new.html?q=developer">Developer</a>,
+                                <a href="jobs_new.html?q=marketing">Marketing</a>,
+                                <a href="jobs_new.html?q=design">Design</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="banner-imgs">
+                            <img alt="TalentBridge" class="img-responsive shape-1" src="assets/imgs/banner/banner.png"/>
+                            <span class="union-icon"><img alt="TalentBridge" class="img-responsive shape-3" src="assets/imgs/banner/union.svg"/></span>
+                            <span class="congratulation-icon"><img alt="TalentBridge" class="img-responsive shape-2" src="assets/imgs/banner/congratulation.svg"/></span>
+                            <span class="docs-icon"><img alt="TalentBridge" class="img-responsive shape-2" src="assets/imgs/banner/docs.svg"/></span>
+                            <span class="course-icon"><img alt="TalentBridge" class="img-responsive shape-3" src="assets/imgs/banner/course.svg"/></span>
+                            <span class="web-dev-icon"><img alt="TalentBridge" class="img-responsive shape-3" src="assets/imgs/banner/web-dev.svg"/></span>
+                            <span class="tick-icon"><img alt="TalentBridge" class="img-responsive shape-3" src="assets/imgs/banner/tick.svg"/></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Companies Section -->
+    <div class="section-box wow animate__animated animate__fadeIn mt-70">
+        <div class="container">
+            <div class="box-swiper">
+                <div class="swiper-container swiper-group-6">
+                    <div class="swiper-wrapper pb-70 pt-5">
+                        <div class="swiper-slide hover-up">
+                            <div class="item-logo"><a href="#"><img alt="company" src="assets/imgs/slider/logo/google.svg"/></a></div>
+                        </div>
+                        <div class="swiper-slide hover-up">
+                            <div class="item-logo"><a href="#"><img alt="company" src="assets/imgs/slider/logo/airbnb.svg"/></a></div>
+                        </div>
+                        <div class="swiper-slide hover-up">
+                            <div class="item-logo"><a href="#"><img alt="company" src="assets/imgs/slider/logo/dropbox.svg"/></a></div>
+                        </div>
+                        <div class="swiper-slide hover-up">
+                            <div class="item-logo"><a href="#"><img alt="company" src="assets/imgs/slider/logo/fedex.svg"/></a></div>
+                        </div>
+                        <div class="swiper-slide hover-up">
+                            <div class="item-logo"><a href="#"><img alt="company" src="assets/imgs/slider/logo/wallmart.svg"/></a></div>
+                        </div>
+                        <div class="swiper-slide hover-up">
+                            <div class="item-logo"><a href="#"><img alt="company" src="assets/imgs/slider/logo/hubspot.svg"/></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories Section -->
+    <section class="section-box">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-lg-7">
+                    <h2 class="section-title mb-20 wow animate__animated animate__fadeInUp">Danh Mục Công Việc</h2>
+                    <p class="text-md-lh28 color-black-5 wow animate__animated animate__fadeInUp">
+                        Khám phá các cơ hội việc làm phù hợp với chuyên ngành và kỹ năng của bạn
+                    </p>
+                </div>
+                <div class="col-lg-5 text-lg-end text-start wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+                    <a class="mt-sm-15 mt-lg-30 btn btn-border icon-chevron-right" href="jobs_new.html">Xem tất cả</a>
+                </div>
+            </div>
+            <div class="row mt-70">
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                    <div class="card-grid hover-up wow animate__animated animate__fadeInUp">
+                        <div class="text-center">
+                            <a href="jobs_new.html?category=marketing">
+                                <figure><img alt="Marketing" src="assets/imgs/theme/icons/marketing.svg"/></figure>
+                            </a>
+                        </div>
+                        <h5 class="text-center mt-20 card-heading"><a href="jobs_new.html?category=marketing">Marketing &amp; Truyền Thông</a></h5>
+                        <p class="text-center text-stroke-40 mt-20">156 Vị Trí</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                    <div class="card-grid hover-up wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
+                        <div class="text-center">
+                            <a href="jobs_new.html?category=content">
+                                <figure><img alt="Content Writer" src="assets/imgs/theme/icons/content-writer.svg"/></figure>
+                            </a>
+                        </div>
+                        <h5 class="text-center mt-20 card-heading"><a href="jobs_new.html?category=content">Biên Tập<br/>Nội Dung</a></h5>
+                        <p class="text-center text-stroke-40 mt-20">268 Vị Trí</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12 wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+                    <div class="card-grid hover-up">
+                        <div class="text-center">
+                            <a href="jobs_new.html?category=it">
+                                <figure><img alt="IT" src="assets/imgs/theme/icons/system-analyst.svg"/></figure>
+                            </a>
+                        </div>
+                        <h5 class="text-center mt-20 card-heading"><a href="jobs_new.html?category=it">Công Nghệ<br/>Thông Tin</a></h5>
+                        <p class="text-center text-stroke-40 mt-20">236 Vị Trí</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                    <div class="card-grid hover-up wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
+                        <div class="text-center">
+                            <a href="jobs_new.html?category=design">
+                                <figure><img alt="Design" src="assets/imgs/theme/icons/business-development.svg"/></figure>
+                            </a>
+                        </div>
+                        <h5 class="text-center mt-20 card-heading"><a href="jobs_new.html?category=design">Thiết Kế<br/>Đồ Họa</a></h5>
+                        <p class="text-center text-stroke-40 mt-20">156 Vị Trí</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                    <div class="card-grid hover-up wow animate__animated animate__fadeInUp">
+                        <div class="text-center">
+                            <a href="jobs_new.html?category=business">
+                                <figure><img alt="Business" src="assets/imgs/theme/icons/marketing-director.svg"/></figure>
+                            </a>
+                        </div>
+                        <h5 class="text-center mt-20 card-heading"><a href="jobs_new.html?category=business">Kinh Doanh<br/>& Phát Triển</a></h5>
+                        <p class="text-center text-stroke-40 mt-20">145 Vị Trí</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                    <div class="card-grid hover-up wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
+                        <div class="text-center">
+                            <a href="jobs_new.html?category=research">
+                                <figure><img alt="Research" src="assets/imgs/theme/icons/proof-reading.svg"/></figure>
+                            </a>
+                        </div>
+                        <h5 class="text-center mt-20 card-heading"><a href="jobs_new.html?category=research">Nghiên Cứu<br/>Thị Trường</a></h5>
+                        <p class="text-center text-stroke-40 mt-20">168 Vị Trí</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                    <div class="card-grid hover-up wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+                        <div class="text-center card-img">
+                            <a href="jobs_new.html?category=hr">
+                                <figure><img alt="HR" src="assets/imgs/theme/icons/testing.svg"/></figure>
+                            </a>
+                        </div>
+                        <h5 class="text-center mt-20 card-heading"><a href="jobs_new.html?category=hr">Nhân Sự<br/>& Hành Chính</a></h5>
+                        <p class="text-center text-stroke-40 mt-20">628 Vị Trí</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                    <div class="card-grid hover-up wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
+                        <div class="text-center mt-15">
+                            <h3>18,265+</h3>
+                        </div>
+                        <p class="text-center mt-30 text-stroke-40">Công việc đang chờ bạn</p>
+                        <div class="text-center mt-30">
+                            <div class="box-button-shadow"><a class="btn btn-default" href="jobs_new.html">Khám phá thêm</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section-box mt-70">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title mb-10 wow animate__animated animate__fadeInUp">Tại Sao Chọn TalentBridge?</h2>
+                <p class="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Nền tảng tìm việc thông minh dành riêng cho sinh viên</p>
+            </div>
+            <div class="row mt-70">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-grid-2 hover-up wow animate__animated animate__fadeIn">
+                        <div class="text-center card-grid-2-image">
+                            <figure><img alt="AI Matching" src="assets/imgs/page/homepage1/icon1.svg"/></figure>
+                        </div>
+                        <h5 class="text-center mt-20">Phân Tích CV Với AI</h5>
+                        <p class="text-center mt-20 text-muted">Upload CV và nhận phân tích chuyên sâu về kỹ năng, kinh nghiệm của bạn</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-grid-2 hover-up wow animate__animated animate__fadeIn" data-wow-delay=".1s">
+                        <div class="text-center card-grid-2-image">
+                            <figure><img alt="Smart Match" src="assets/imgs/page/homepage1/icon2.svg"/></figure>
+                        </div>
+                        <h5 class="text-center mt-20">Gợi Ý Công Việc Phù Hợp</h5>
+                        <p class="text-center mt-20 text-muted">Hệ thống AI tự động gợi ý các công việc phù hợp nhất với profile của bạn</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-grid-2 hover-up wow animate__animated animate__fadeIn" data-wow-delay=".2s">
+                        <div class="text-center card-grid-2-image">
+                            <figure><img alt="Dashboard" src="assets/imgs/page/homepage1/icon3.svg"/></figure>
+                        </div>
+                        <h5 class="text-center mt-20">Quản Lý Ứng Tuyển</h5>
+                        <p class="text-center mt-20 text-muted">Theo dõi tiến trình ứng tuyển và quản lý CV của bạn một cách dễ dàng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-box mt-70 mb-40">
+        <div class="container">
+            <div class="box-newsletter">
+                <div class="row">
+                    <div class="col-xl-3 col-12 text-center d-none d-xl-block">
+                        <img alt="newsletter" src="assets/imgs/template/newsletter-left.png"/>
+                    </div>
+                    <div class="col-lg-12 col-xl-6 col-12">
+                        <h2 class="text-md-newsletter text-center">Bắt Đầu Tìm Việc Ngay Hôm Nay</h2>
+                        <div class="font-md color-text-paragraph-2 text-center">
+                            Tải CV lên và để AI giúp bạn tìm công việc phù hợp nhất
+                        </div>
+                        <div class="box-form-newsletter mt-40">
+                            <div class="text-center">
+                                <a class="btn btn-default font-heading icon-send-letter" href="cv_analyzer.html">Phân Tích CV Ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-12 text-center d-none d-xl-block">
+                        <img alt="newsletter" src="assets/imgs/template/newsletter-right.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer mt-50">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1 col-md-3 col-sm-12">
+                <a href="index.html"><img alt="TalentBridge" src="assets/imgs/theme/jobhub-logo.svg"/></a>
+                <div class="mt-20 mb-20 font-xs color-text-paragraph-2">
+                    TalentBridge là nền tảng tìm việc thông minh dành cho sinh viên, sử dụng AI để phân tích CV và gợi ý công việc phù hợp.
+                </div>
+                <div class="footer-social">
+                    <a class="icon-socials icon-facebook" href="#"></a>
+                    <a class="icon-socials icon-twitter" href="#"></a>
+                    <a class="icon-socials icon-linkedin" href="#"></a>
+                </div>
+            </div>
+            <div class="footer-col-2 col-md-2 col-xs-6">
+                <h6 class="mb-20">Về Chúng Tôi</h6>
+                <ul class="menu-footer">
+                    <li><a href="page-about.html">Giới Thiệu</a></li>
+                    <li><a href="page-contact.html">Liên Hệ</a></li>
+                    <li><a href="#">Điều Khoản</a></li>
+                    <li><a href="#">Chính Sách</a></li>
+                </ul>
+            </div>
+            <div class="footer-col-3 col-md-2 col-xs-6">
+                <h6 class="mb-20">Dành Cho Sinh Viên</h6>
+                <ul class="menu-footer">
+                    <li><a href="jobs_new.html">Tìm Việc</a></li>
+                    <li><a href="cv_analyzer.html">Phân Tích CV</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="#">Hướng Dẫn</a></li>
+                </ul>
+            </div>
+            <div class="footer-col-4 col-md-2 col-xs-6">
+                <h6 class="mb-20">Dành Cho Nhà Tuyển Dụng</h6>
+                <ul class="menu-footer">
+                    <li><a href="#">Đăng Tin</a></li>
+                    <li><a href="#">Tìm Ứng Viên</a></li>
+                    <li><a href="#">Gói Dịch Vụ</a></li>
+                    <li><a href="#">Hỗ Trợ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col-5 col-md-3 col-xs-6">
+                <h6 class="mb-20">Tải Ứng Dụng</h6>
+                <p class="color-text-paragraph-2 font-xs">Tải ứng dụng TalentBridge để tìm việc mọi lúc mọi nơi</p>
+                <div class="mt-15">
+                    <a class="mr-5" href="#"><img alt="App Store" src="assets/imgs/template/app-store.png"/></a>
+                    <a href="#"><img alt="Google Play" src="assets/imgs/template/google-play.png"/></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom mt-50">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="font-xs color-text-paragraph">Copyright &copy; 2024 TalentBridge. Phát triển bởi Đại học Đồng Nai</span>
+                </div>
+                <div class="col-md-6 text-md-end text-start">
+                    <div class="footer-social">
+                        <a class="font-xs color-text-paragraph" href="#">Chính Sách Bảo Mật</a>
+                        <a class="font-xs color-text-paragraph mr-30 ml-30" href="#">Điều Khoản &amp; Điều Kiện</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+<script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+<script src="assets/js/vendor/jquery-migrate-3.3.0.min.js"></script>
+<script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script src="assets/js/plugins/waypoints.js"></script>
+<script src="assets/js/plugins/wow.js"></script>
+<script src="assets/js/plugins/magnific-popup.js"></script>
+<script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
+<script src="assets/js/plugins/select2.min.js"></script>
+<script src="assets/js/plugins/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js?v=1.0"></script>
+
+<!-- Load Header Component -->
+<script>
+    // Load header component
+    fetch('components/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+
+            // Set active page
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.main-menu a, .mobile-menu a');
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        })
+        .catch(error => console.error('Error loading header:', error));
+</script>
+</body>
+</html>

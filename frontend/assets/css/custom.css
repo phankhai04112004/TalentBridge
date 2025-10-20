@@ -1,0 +1,371 @@
+/**
+ * TalentBridge Custom CSS
+ * Additional styles for improved UI/UX
+ */
+
+/* ===== GLOBAL IMPROVEMENTS ===== */
+
+/* Smooth transitions */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Better button hover effects */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* ===== SCORE CARDS (CV ANALYSIS) ===== */
+
+.score-card {
+    border-radius: 12px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+    border-left: 4px solid transparent;
+}
+
+.score-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.score-card.score-green {
+    border-left-color: #10b981;
+}
+
+.score-card.score-yellow {
+    border-left-color: #f59e0b;
+}
+
+.score-card.score-red {
+    border-left-color: #ef4444;
+}
+
+.score-card-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.score-circle-inline {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    flex-shrink: 0;
+}
+
+.score-info {
+    flex: 1;
+}
+
+.score-info h6 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 4px;
+}
+
+.score-info p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 0;
+}
+
+/* ===== JOB CARDS ===== */
+
+.card-grid-2 {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card-grid-2:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+.card-grid-2 .card-block-info {
+    padding: 24px;
+}
+
+.card-grid-2 .card-2-img-text {
+    transition: color 0.3s;
+}
+
+.card-grid-2 .card-2-img-text:hover {
+    color: #9777fa;
+}
+
+/* Job card badges */
+.card-grid-2 .btn-grey-small {
+    background: rgba(151, 119, 250, 0.1);
+    color: #9777fa;
+    border: 1px solid rgba(151, 119, 250, 0.2);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: all 0.3s;
+}
+
+.card-grid-2 .btn-grey-small:hover {
+    background: #9777fa;
+    color: white;
+    border-color: #9777fa;
+}
+
+/* ===== DASHBOARD IMPROVEMENTS ===== */
+
+.stats-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+}
+
+.stats-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.stats-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #9777fa;
+}
+
+.stats-label {
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 8px;
+}
+
+/* ===== PAGINATION ===== */
+
+.paginations .pager {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.paginations .pager li a {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    color: #6b7280;
+    transition: all 0.3s;
+}
+
+.paginations .pager li a:hover {
+    background: #9777fa;
+    color: white;
+    border-color: #9777fa;
+    transform: translateY(-2px);
+}
+
+.paginations .pager li a.active {
+    background: #9777fa;
+    color: white;
+    border-color: #9777fa;
+}
+
+/* ===== FILTERS ===== */
+
+.box-filters {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.dropdown .btn {
+    border-radius: 8px;
+    padding: 10px 16px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    color: #6b7280;
+}
+
+.dropdown .btn:hover {
+    border-color: #9777fa;
+    color: #9777fa;
+}
+
+.dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    border: none;
+}
+
+.dropdown-item {
+    padding: 10px 16px;
+    transition: all 0.3s;
+}
+
+.dropdown-item:hover {
+    background: rgba(151, 119, 250, 0.1);
+    color: #9777fa;
+}
+
+.dropdown-item.active {
+    background: #9777fa;
+    color: white;
+}
+
+/* ===== LOADING STATES ===== */
+
+.spinner-border {
+    border-width: 3px;
+}
+
+.loading-placeholder {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.loading-placeholder .spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* ===== ALERTS ===== */
+
+.alert {
+    border-radius: 8px;
+    border: none;
+    padding: 16px 20px;
+}
+
+.alert-success {
+    background: rgba(16, 185, 129, 0.1);
+    color: #065f46;
+}
+
+.alert-warning {
+    background: rgba(245, 158, 11, 0.1);
+    color: #92400e;
+}
+
+.alert-danger {
+    background: rgba(239, 68, 68, 0.1);
+    color: #991b1b;
+}
+
+.alert-info {
+    background: rgba(59, 130, 246, 0.1);
+    color: #1e40af;
+}
+
+/* ===== BADGES ===== */
+
+.badge-custom {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin: 4px;
+    font-weight: 500;
+}
+
+.badge-skill {
+    background: rgba(151, 119, 250, 0.1);
+    color: #6d4bd3;
+}
+
+.badge-strength {
+    background: rgba(16, 185, 129, 0.1);
+    color: #065f46;
+}
+
+.badge-weakness {
+    background: rgba(239, 68, 68, 0.1);
+    color: #991b1b;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+    .score-card-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .score-circle-inline {
+        margin: 0 auto;
+    }
+    
+    .stats-card {
+        margin-bottom: 16px;
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease;
+}
+
+/* ===== SCROLLBAR ===== */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9777fa;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6d4bd3;
+}
+
