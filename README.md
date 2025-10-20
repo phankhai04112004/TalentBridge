@@ -60,8 +60,6 @@
 
 ### 🤖 1. Phân Tích CV Thông Minh
 
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Page%20with%20Curl.png" alt="CV" width="50" />
-
 - **Upload PDF** - Kéo thả hoặc chọn file CV
 - **AI Parse** - Gemini AI tự động đọc và trích xuất thông tin
 - **Structured Data** - Chuyển đổi sang JSON với đầy đủ thông tin:
@@ -72,8 +70,6 @@
   - Mục tiêu nghề nghiệp (career objective)
 
 ### 📊 2. Đánh Giá Chất Lượng CV
-
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Chart%20Increasing.png" alt="Chart" width="50" />
 
 - **3 Điểm Số Chính:**
   - 🎯 **Quality Score** (0-10) - Chất lượng tổng thể
@@ -87,7 +83,6 @@
 
 ### 🎯 3. Tìm Việc Phù Hợp (Semantic Matching)
 
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bullseye.png" alt="Target" width="50" />
 
 - **Semantic Search** - Tìm kiếm theo nghĩa với ChromaDB
 - **AI Ranking** - Gemini AI xếp hạng độ phù hợp (0-100%)
@@ -101,7 +96,6 @@
 
 ### 📈 4. Dashboard Analytics
 
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bar%20Chart.png" alt="Analytics" width="50" />
 
 - **6 Biểu Đồ Thống Kê:**
   - 📊 Top 10 Vị Trí Tuyển Dụng
