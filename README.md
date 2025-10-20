@@ -400,6 +400,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 **⭐ Nếu project này hữu ích, hãy cho một star nhé! ⭐**
 
-Made with ❤️ by [Trịnh Văn Hào](https://github.com/Trinhvhao)
+Made with ❤️ by [Phan Xuân Khải]
 
 </div>
