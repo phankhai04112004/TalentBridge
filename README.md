@@ -382,8 +382,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 **Trịnh Văn Hào**
 
 - GitHub: [@Trinhvhao](https://github.com/Trinhvhao)
-- Email: trinhvhao@example.com
-
+- Email: haotrinh142@gmail.com
 ---
 
 ## 🙏 Acknowledgments
