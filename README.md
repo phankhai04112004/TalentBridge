@@ -379,10 +379,11 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 👨‍💻 Tác Giả
 
-**Trịnh Văn Hào**
+**Phan Xuân Khải**
 
-- GitHub: [@Trinhvhao](https://github.com/Trinhvhao)
-- Email: haotrinh142@gmail.com
+- GitHub: [@phankhai04112004
+](https://github.com/phankhai04112004)
+- Email: pkhai7444@gmail.com
 ---
 
 ## 🙏 Acknowledgments
