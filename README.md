@@ -1,5 +1,6 @@
 <div align="center">
 
+<img src="logo.png" alt="TalentBridge Logo" width="200" style="margin-bottom: 20px"/>
 # 🎯 TalentBridge
 
 ### *Nền Tảng Tìm Việc Thông Minh Cho Sinh Viên*
